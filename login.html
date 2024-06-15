@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title></title>
+    <style>
+      * {
+        font-family: "Zen Kaku Gothic Antique", sans-serif;
+        background-color: #121212;
+      }
+      #loginpage {
+        width: 40%;
+        height: 400px;
+        background-color: #121212;
+        border: 1px solid white;
+        border-radius: 8px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-bottom: 15px;
+      }
+      #cross {
+        width: 25px;
+        height: 33px;
+
+        margin: 0px 0px 0px 486px;
+      }
+      .cross {
+        color: white;
+        font-size: 35px;
+        padding: 0px 0px 0px 0px;
+      }
+      #logincontainer {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        height: 46px;
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 80px;
+        border-radius: 5px;
+        border: 1px solid #353535;
+      }
+      #mobilenumber {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        height: 46px;
+        padding: 0px 0px 0px 0px;
+        margin: 24px 0px 0px 80px;
+        border-radius: 5px;
+        border: 1px solid rgb(221, 218, 218);
+      }
+      #inputnumber {
+        width: 85%;
+        height: 46px;
+        margin: 0px 0px 0px 0px;
+        border-radius: 5px;
+      }
+      #india {
+        width: 15%;
+        height: 46px;
+        margin: 0px 0px 0px 0px;
+        border-radius: 5px;
+      }
+      #login {
+        width: 44%;
+        height: 43px;
+      }
+      #register {
+        width: 44%;
+        height: 43px;
+      }
+      #line {
+        width: 0%;
+        height: 35px;
+        border: 0.5px solid #dad5d5;
+      }
+      #number {
+        width: 91%;
+        height: 42px;
+        background-color: #121212;
+        border: none;
+        margin: 0px 0px 0px 21px;
+        outline: none;
+        color: white;
+        font-size: 26px;
+      }
+      #number::placeholder {
+        color: #b1b1b1;
+        font-size: 20px;
+        padding-left: 15px;
+        letter-spacing: 1px;
+      }
+      #checkbox {
+        width: 20px;
+        height: 20px;
+        background-color: rgb(27, 27, 27);
+        border: 1px solid white;
+      }
+      #keep {
+        width: 40%;
+        height: 40px;
+
+        font-size: 10px;
+        margin: 21px 0px 0px 167px;
+      }
+      #terms {
+        width: 85%;
+        height: 30px;
+        margin: 43px 0px 0px 45px;
+      }
+      #continue {
+        width: 70%;
+        height: 46px;
+        padding: 0px 0px 0px 0px;
+        margin: 3px 0px 0px 80px;
+        border-radius: 5px;
+        border: none;
+      }
+      #continuebtn {
+        width: 100%;
+        height: 46px;
+        margin: 0px 0px 0px 0px;
+        border-radius: 5px;
+        outline: none;
+        background-color: #00e9bf;
+        border: 1px solid #00e9bf;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loginpage">
+      <div id="cross">
+        <p class="cross">&#x000D7;</p>
+      </div>
+      <div id="logincontainer">
+        <div id="login">
+          <p
+            style="
+              color: white;
+              font-size: 16px;
+              padding: 0px 0px 0px 0px;
+              margin: 11px 0px 0px 66px;
+              font-family: 'Zen Kaku Gothic Antique', sans-serif;
+              letter-spacing: 0.5px;
+            "
+          >
+            Login
+          </p>
+        </div>
+        <div id="line">
+          <div
+            style="
+              display: flex;
+              height: 21px;
+              width: 30px;
+              border-radius: 8px;
+              border: 1px solid #838080;
+              margin: 8px 0px 0px -16px;
+              padding: 0px 0px 0px 0px;
+              background-color: #121212;
+            "
+          >
+            <p
+              style="
+                color: white;
+                font-size: 14px;
+                padding: 0px 0px 0px 0px;
+                margin: 3px 0px 0px 4px;
+                font-family: 'Zen Kaku Gothic Antique', sans-serif;
+              "
+            >
+              OR
+            </p>
+          </div>
+        </div>
+        <div id="register">
+          <p
+            style="
+              color: white;
+              font-size: 16px;
+              padding: 0px 0px 0px 0px;
+              margin: 11px 0px 0px 23px;
+              font-family: 'Zen Kaku Gothic Antique', sans-serif;
+              letter-spacing: 0.5px;
+            "
+          >
+            Create Account
+          </p>
+        </div>
+      </div>
+      <p
+        style="
+          color: white;
+          font-size: 14px;
+          padding: 0px 0px 0px 0px;
+          margin: 23px 0px 0px 129px;
+          font-family: 'Zen Kaku Gothic Antique', sans-serif;
+          letter-spacing: 0.5px;
+        "
+      >
+        Enter Your Mobile number to recieve OTP
+      </p>
+      <div id="mobilenumber">
+        <div id="india">
+          <p
+            style="
+              color: white;
+              font-size: 21px;
+              padding: 0px 0px 0px 0px;
+              margin: 11px 0px 0px 11px;
+              font-family: 'Zen Kaku Gothic Antique', sans-serif;
+              letter-spacing: 0.5px;
+            "
+          >
+            +91
+          </p>
+        </div>
+        <div
+          style="
+            width: 0%;
+            height: 30px;
+            border: 1px solid white;
+            margin: 7px 0px 0px 0px;
+          "
+        ></div>
+        <div id="inputnumber">
+          <input
+            type="text"
+            maxlength="10"
+            id="number"
+            placeholder="Enter Your Number"
+          />
+        </div>
+      </div>
+      <div id="keep">
+        <input type="checkbox" id="checkbox" />
+        <p style="color: white; margin: -20px 0px 0px 34px; font-size: 14px">
+          &nbsp;&nbsp;Keep me Signed in
+        </p>
+      </div>
+      <div id="terms">
+        <p
+          style="
+            color: white;
+            margin: -20px 0px 0px 34px;
+            font-size: 13px;
+            cursor: pointer;
+          "
+        >
+          By continuing you agree to our
+          <a style="color: #00e9bf !important; text-decoration: underline"
+            >Terms of Use</a
+          >
+          and
+          <a style="color: #00e9bf !important; text-decoration: underline"
+            >Privacy Policy</a
+          >
+        </p>
+      </div>
+      <div id="continue">
+        <button id="continuebtn" onclick="otp()">continue</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    function otp() {
+      window.location.href = "otp.html";
+    }
+  </script>
+</html>

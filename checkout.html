@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>croma - Payment</title>
+    <link
+      rel="shortcut icon"
+      href="https://lh3.googleusercontent.com/Hh_QKiJDmg2LQdL2aJ3cw_hBnWyH6dEqaFsiOgLNAZ6XnpPVuvrBCSeNzKQA8GCk519H=s180"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://lh3.googleusercontent.com/Hh_QKiJDmg2LQdL2aJ3cw_hBnWyH6dEqaFsiOgLNAZ6XnpPVuvrBCSeNzKQA8GCk519H=s180"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/styles/checkout.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+
+  </head>
+  <body>
+        <!-- Navbar Starts-->
+        <div id="navbar"></div>
+        <!-- Navbar Ends -->
+        <!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Please Enter Correct Account Details</p>
+  </div>
+
+</div>
+
+<div id="myModal1" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <!-- <span class="close">&times;</span> -->
+    <p> Your order was Successfully Placed</p>
+    <h4>Redirecting to The HomePage</h4>
+  </div>
+
+</div>
+      <main>
+          <div id="mainCon">
+          <p id="payP">Payments</p>
+        <!-- <div id="headBar" class="flex" style="justify-content: space-evenly">
+          <h2 id="cartValue">Make Payment</h2>
+          <div class="payproBar">
+            <div class="cirBox" style="background-color: #00e9bf"
+              ><i class="fas fa-check"></i
+            ></div>
+            <div class="headLin"></div>
+            <div class="cirBox" style="background-color: #00e9bf"
+              ><i class="fas fa-check"></i
+            ></div>
+            <div class="headLin" style="background-color: #00e9bf"></div>
+            <div class="cirBox" style="background-color: #ffb900">3</div>
+          <!-- </div> -->
+         </div>  
+        <div id="subDiv" class="flex" style="justify-content: space-between">
+          <div id="cardPro" class="flexV">
+            <div class="card">
+              <div class="controlCard">
+                <h2> Gift card /Voucher</h2>
+                <button onclick="openBox('.gst')" class="gstBtn"
+                  >^</button>
+              </div>
+              <div class="gst off" style="margin-top: 20px">
+                <input
+                  type="text"
+                  name="gstn"
+                  id="gstn"
+                  placeholder="Enter Voucher Number"
+                />
+                <button id="vali" 
+                  >VALIDATE Voucher Number</button
+                ></div
+              >
+            </div>
+            <div class="card">
+              <div class="controlCard">
+                <h2> Payment</h2>
+                <button onclick="openBox('.creditPay')" class="creditPayBtn"
+                  >^</button>
+              </div>
+              <div class="creditPay off">
+                <div class="payCard">
+                  <div id="payBox1"
+                    ><label for="Card_no">CREDIT CARD NO</label>
+                    <input
+                      type="text"
+                      name="Card_no"
+                      id="Card_no"
+                      placeholder="**** **** **** **** 1234"
+                  /></div>
+                  <div id="payBox2"
+                    ><label for="EXP">EXP</label>
+                    <input type="text" name="EXP" id="EXP" placeholder="MM/YY"
+                  /></div>
+                  <div id="payBox3"
+                    ><label for="CVV">CVV</label>
+                    <input type="text" name="CVV" id="CVV" placeholder="123"
+                  /></div>
+                </div>
+                <button
+                  id="checkout" onclick="myForm()"
+                  > PAY</button
+                >
+              </div>
+            </div>
+            <!-- Right Side Summary -->
+          </div>
+          <div id="sideData" class="flexV">
+            <div id="paymentDet" class="card">
+              <h2> Order Summary</h2>
+              <div class="minFlex">
+                <p>Item total</p> <p id="price" style="margin: 6px 24px;">₹0.00</p>
+              </div>
+              <div class="minFlex">
+                <p>Delivery cost at <b style="color: #00e9bf">400049</b> </p>
+                <p>Free</p>
+              </div>
+              <hr />
+              <div class="minFlex">
+                <p>Total price</p> <p id="totalCost">0.00</p>
+              </div>
+              <hr />
+              <p style="text-align: center"
+                >By placing the order you have agreed to</p
+              >
+              <p style="text-align: center; color: #00e9bf;  margin: -10px 2px 6px;"
+                >Terms and condition</p
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- <div id="footr"></div> -->
+  </body>
+  </html>
+  <script>
+      // let testData = JSON.parse(localStorage.getItem("added"))||[]
+
+  // mapCart(testData);
+  </script>
+  <script src="./JS/checkout.js"></script>
+  <script type="module">
+    //
+    import navbarImp from "./components/navbar.js";
+    //console.log("navbarImp:", navbarImp());
+  
+    let navID = document.getElementById("navbar");
+    navID.innerHTML = navbarImp();
+//     import footer from "./components/footer.js";
+
+// let footr = document.getElementById("footr")
+// footr.innerHTML =footer();
+
+  
+    document
+      .getElementById("nav-top-search")
+      .addEventListener("keypress", (elem) => {
+        if (elem.code == "Enter") {
+          //console.log(elem);
+  
+          let inputVal = document.getElementById("nav-top-search").value;
+          console.log("inputVal:", inputVal);
+  
+          if (
+            inputVal == "mobile" ||
+            inputVal == "MOBILE" ||
+            inputVal == "Mobile" ||
+            inputVal == "mobiles" ||
+            inputVal == "MOBILES" ||
+            inputVal == "Mobiles"
+          ) {
+            console.log("passed if condition:", inputVal);
+          }
+  
+          //window.location = "";
+        }
+      });
+  
+    //
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  

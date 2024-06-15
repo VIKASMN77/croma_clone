@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/cart.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+     
+</head>
+
+<body>
+    <!-- Navbar Starts-->
+    <div id="navbar"></div>
+    <!-- Navbar Ends -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <!-- modalFinish  -->
+             <!-- Apply COUPON section start here --> 
+             <div id="YourCart">Your Cart</div>
+             <div id="apply">
+                <button class="apply-coupon-button"><div class="apply-coupen-symbol">%</div><span class="Apply-coupon">APPLY COUPON</span></button>
+             </div>
+                       <!-- Apply COUPON section ends here --> 
+        <div id="parent">
+       
+
+            <div id="cartS">
+                <div id="container"></div>
+                <div id="containerCont">
+
+                </div>
+            </div>
+
+<div id="rightP">
+
+
+            <div id="rightPart">
+                    <p id="delLine">Delivery options for <span style="color:rgb(52, 235, 165)">486002</span></p>
+                    <div id="stand"> <input type="radio"> <span id="image-del"><img src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637828519/Croma%20Assets/UI%20Assets/Standard-Delivery-Black-Theme.svg/mxw_2048,f_auto" alt=""></span> 
+                       Standard Delivery </div>
+                       <div id="cromad">  
+                           <input type="radio">
+                           <span id="image-del"> <img src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637828617/Croma%20Assets/UI%20Assets/Store_Pickup_Black_Theme.svg/mxw_2048,f_auto" alt=""></span>
+                           <span id="avail"> Available For Pickup, <p style="margin: -6px 58px;">Croma, Andheri W</p>
+                            <h6>Select Another Store</h6>
+
+                            </span>
+                       
+                        </div>
+                
+                <!-- <h2>Apply Promo Code</h2> -->
+            </div>
+            <div id="dat">
+                <p id="Btitle">Payment Details</p>
+                <p id="tot">Item Total</p>
+                <span id="total"> ₹ 0.00</span>
+                <div id="delivery-cost">
+                    Delivery cost at 400049 <div id="free"> Free</div>
+                </div>
+                <!-- <div id="discount"></div> -->
+                <div id="checkO">
+                    <button onclick="redirect()">Checkout</button> 
+                </div>
+            </div>
+        </div> 
+        </div>
+        <!-- Back to top -->
+        <a class="gotopbtn" href="#"> <i class="fas fa-arrow-up">Top</i> </a>
+
+
+</body>
+
+</html>
+<script src="/JS/cart.js"></script>
+
+<!-- Navbar Related code Starts -->
+<script type="module">
+    //
+    import navbarImp from "./components/navbar.js";
+    //console.log("navbarImp:", navbarImp());
+  
+    let navID = document.getElementById("navbar");
+    navID.innerHTML = navbarImp();
+  
+    document
+      .getElementById("nav-top-search")
+      .addEventListener("keypress", (elem) => {
+        if (elem.code == "Enter") {
+          //console.log(elem);
+  
+          let inputVal = document.getElementById("nav-top-search").value;
+          console.log("inputVal:", inputVal);
+  
+          if (
+            inputVal == "mobile" ||
+            inputVal == "MOBILE" ||
+            inputVal == "Mobile" ||
+            inputVal == "mobiles" ||
+            inputVal == "MOBILES" ||
+            inputVal == "Mobiles"
+          ) {
+            console.log("passed if condition:", inputVal);
+          }
+  
+          //window.location = "";
+        }
+      });
+  
+    //
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  
+  <!-- Navbar Related code ends -->

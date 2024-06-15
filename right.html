@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles/right.css">
+    <!-- Navbar Related code Starts -->
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <!-- Navbar Related code ends -->
+
+</head>
+<body>
+    <!-- Navbar Starts-->
+    <div id="navbar"></div>
+    <!-- Navbar Ends -->
+  
+    <div id="allData">
+
+    
+
+        <div id="categories1"  >
+         
+            <div class="right">
+                <h6>SORT BY</h6>
+                <select class="searchbox">
+                    <option value="FEATURED">FEATURED</option>
+                    <option value="Latest Arrival">LASTEST ARRIVAL</option>
+                    <option value="Price (Highest First)">PRICE (HIGHEST FIRST)</option>
+                    <option value="Price (Lowest First)">PRICE (LOWEST FIRST)</option>
+                   <option value="Discount (Descending)">DISCOUNT (DESCENDING)</option>
+                   <option value="Top Rated">TOP RATED</option>
+                </select>
+            </div>
+            <div class="right">
+                <h6>FILTER BY</h6>
+                <!-- to append the selected products .... -->
+                <p id="appendproducts"></p>
+    
+                <hr style="border-color:#1d1d1d">
+                <h6>CATEGORY</h6>
+                <div class="sortbycategory">
+                    <!-- search bar -->
+                    <input type="text" placeholder="SEARCH" class="searchbox">
+                    <br>
+                    <br>
+                    <!-- list -->
+                    <input type="checkbox" class="checkbox" id="sort1"  onclick="sorted()">
+                    <label for="Portable & Bluetooth Speakers (296)">Portable & Bluetooth Speakers (296)</label>
+                    <br>
+                    <input type="checkbox"class="checkbox">
+                    <label for="Truly Wireless Earbuds (255)">Truly Wireless Earbuds (255)</label>
+                    <br>
+                    <input type="checkbox"class="checkbox">
+                    <label for="Bluetooth Earphones (214)">Bluetooth Earphones (214)</label>
+                    <br>
+                
+                    <input type="checkbox"class="checkbox">
+                    <label for="Bluetooth Headphones (168) )">Bluetooth Headphones (168)</label>
+    
+                    <!-- see more -->
+                    <p onclick="seemore(a,b)" class="more" ><u>see more+</u></p>
+                    <div class = "see-more" >
+                       
+                        <input type="checkbox"class="checkbox">
+                        <label for="Earphones (129)">Earphones (129)</label>
+                        <br>
+                        <input type="checkbox"class="checkbox">
+                        <label for="Sound Bars (73)">Sound Bars (73)</label>
+                        <br>
+                        <input type="checkbox"class="checkbox">
+                        <label for="Headphones (58)">Headphones (58)</label>
+                        <br>
+                        <input type="checkbox"class="checkbox">
+                        <label for="Gaming Headsets (45)">Gaming Headsets (45)</label>
+                        <br>
+                        <input type="checkbox"class="checkbox">
+                        <label for="Multimedia Speakers (42)">Multimedia Speakers (42)</label>
+                        <p onclick="seeless(a,b)" class="see-less"><u>see less-</u></p>
+                   </div>
+               </div>
+    
+               <!-- 2nd div PRICE-->
+               <h6>PRICE</h6>
+               <div class="sortbycategory">
+                <!-- search bar -->
+                    <input type="text" placeholder="SEARCH" class="searchbox">
+                
+                    <br>
+                    <br>
+                    <!-- list -->
+                    <input type="checkbox"class="checkbox">
+                    <label for="500 & Below (7)">500 & Below (7)</label>
+                    <br>
+                    <input type="checkbox"class="checkbox">
+                    <label for="501 - 1,000 (73)">501 - 1,000 (73)</label>
+                    <br>
+                    <input type="checkbox"class="checkbox">
+                    <label for="1,001 - 1,500 (42)">1,001 - 1,500 (42)</label>
+                    <br>
+                
+                    <input type="checkbox"class="checkbox">
+                    <label for="1,501 - 3,000 (61) ">1,501 - 3,000 (61)</label>
+    
+                    <!-- see more -->               
+                    <p  onclick="seemore(a,b)" class="more" ><u>see more+</u></p>
+                    <div class = "see-more" >
+                    
+                        <input type="checkbox"class="checkbox">
+                        <label for="3,001 - 5,000 (22)">3,001 - 5,000 (22)</label>
+                        <br>
+                        <input type="checkbox"class="checkbox">
+                        <label for="5,001 - 10,000 (6)">5,001 - 10,000 (6)</label>
+                        <br>
+                        <input type="checkbox"class="checkbox">
+                        <label for="10,001 - 20,000 (3)">10,001 - 20,000 (3)</label>
+                    
+                        <p onclick="seeless(a,b)" class="see-less"><u>see less-</u></p>
+                   </div>
+                  <!-- 2nd div end -->
+                   <!-- 3rd div BRAND-->
+                    <h6>BRAND</h6>
+                    <div class="sortbycategory">
+                     <!-- search bar -->
+                        <input type="text" placeholder="SEARCH" class="searchbox">
+                    
+                        <br>
+                        <br>
+                        <!-- list -->
+                        <input type="checkbox"class="checkbox">
+                        <label for="Boompods (1)">Boompods (1)</label>
+                        <br>
+                        <input type="checkbox"class="checkbox">
+                        <label for="PTron (6)">PTron (6)</label>
+                        <br>
+                        <input type="checkbox"class="checkbox">
+                        <label for="Staunch (1)">Staunch (1)</label>
+                        <br>
+                    
+                        <input type="checkbox"class="checkbox">
+                        <label for="TECNO (1) ">TECNO (1)</label>
+                          <!-- see more -->               
+                       <p  onclick="seemore(a,b)" class="more" ><u>see more+</u></p>
+                     <div class = "see-more" >
+                    
+                        <input type="checkbox"class="checkbox">
+                        <label for="3,001 - 5,000 (22)">3,001 - 5,000 (22)</label>
+                        <br>
+                        <input type="checkbox"class="checkbox">
+                        <label for="5,001 - 10,000 (6)">5,001 - 10,000 (6)</label>
+                        <br>
+                        <input type="checkbox"class="checkbox">
+                        <label for="10,001 - 20,000 (3)">10,001 - 20,000 (3)</label>
+                    
+                        <p onclick="seeless(a,b)" class="see-less"><u>see less-</u></p>
+                     </div>
+                    </div>
+    
+                    <!-- 3rd div end -->
+    
+                    <!-- 4th div -->
+                    <h6>DELIVERY MODES</h6>
+                    <div class="sortbycategory">
+                    <!-- search bar -->
+                        <input type="text" placeholder="SEARCH" class="searchbox">
+                    
+                        <br>
+                        <br>
+                        <!-- list -->
+                        <input type="checkbox"class="checkbox">
+                        <label for="  Home Delivery (1186)">  Home Delivery (1186)</label>
+                        <br>
+                        <input type="checkbox"class="checkbox">
+                        <label for="Store Pickup (665)">Store Pickup (665)</label>
+                        <br>
+                        <input type="checkbox"class="checkbox">
+                        <label for="Staunch (1)">Staunch (1)</label>
+                       
+                    </div>
+    
+                    <!-- 4th div end -->
+      
+                    <!-- 5th div -->
+                    <h6>COUNTRY OF MANUFACTURING</h6>
+                  <div class="sortbycategory">
+                     
+                        <input type="checkbox"class="checkbox">
+                        <label for="china">china</label>
+                  </div>
+                  <!-- 5th div end -->
+    
+                  <!-- 6th div -->
+                  <h6>COUNTRY OF ORIGIN</h6>
+                  <div class="sort by category">
+                     
+                        <input type="checkbox"class="checkbox">
+                        <label for="china">china</label>
+                           <br>
+                        <input type="checkbox"class="checkbox">
+                        <label for="India">India</label>
+                  </div>
+                  <!-- 6th div end -->
+               
+                  <!-- 7th div -->
+                  <h6>PRODUCT TYPE</h6>
+                 
+                     
+                    <input type="checkbox"class="checkbox">
+                     <label for="">Full Cover Case (36)</label>
+                     <br>
+                     <input type="checkbox"class="checkbox">
+                     <label for="Back Case (1)">Back Case (1)</label>
+                        <br>
+                     <input type="checkbox"class="checkbox">
+                     <label for="Flip Case (1)">Flip Case (1)</label>
+        
+                  <!-- 7th div end -->
+                  <h6>IDEAL FOR</h6>
+                  <h6>LIFESTYLE</h6>  
+                  <h6>PRODUCT TYPE</h6>
+                  <h6>GENDER</h6>
+                  <h6>PROJECTOR FORMAT</h6>
+                  <h6>SUBWOOFER TYPE</h6>
+                  <h6>SUITABLE FOR</h6>
+                  <h6>COMPATIBILITY</h6>
+                  <h6>CARD TYPE</h6>
+                  <h6>DISCOUNT</h6>  
+                  <h6>CONNECTORS</h6>
+                  <h6>POWER SOURCE</h6>
+                  <h6>PROJECTOR FORMAT</h6>
+                  <h6>WEIGHT</h6>
+                  <h6>COLOUR FAMILY</h6>
+                  <h6>COMPATIBILITY</h6>
+                  <h6>STORE AVAILABILITY</h6>
+            </div>
+        </div>
+       
+     
+    </div>
+
+    <div id ="container"></div>
+</div>
+    
+
+<div id = "bottompara">
+    <p> <span><b>Looking to buy new audio & video devices? Shop for New Audio and Video with Latest Technology</b></span> <br>
+        With a wide range of gadgets available in the market, it often gets confusing to differentiate 
+        one product from its competitor or to choose one that best meets your requirements. This is where Croma steps in. At <b>Croma</b>,
+        we take pride in helping you buy. It is our constant endeavour to understand your needs and help you find the product best
+        suited for You! Because, a purchase is just the first step to a relationship that will last for years to come.</p>
+
+    <p>We have ample expertise in selling entertainment devices owing to our tie-ups and associations with a variety of OEMs 
+        like <b>Amazon, Apple, Beats, Boompods, Bose, Eleon, Google, Jabra, Harman-Kardon, JBL, Sennheiser, Shemaroo, Skullcandy,
+        Sony </b> and more who are known for being the best home theatre and sound system brands, not only in India but across the world.
+        In fact, this strong association allows us to gather unique insights of what the market actually wants and hence, we offer
+        a wide range of audio and video gadgets. Owing to this you can easily explore the catalogue
+        and buy audio and video products, but we recommend it is best to experience it in-store through one of our 
+        representatives to ensure you get the right one at right price.</p>
+
+    <p>
+        <span><b>The importance of good audio and video quality</b></span> <br>
+        To have a true cinema movie experience or gaming experience the audio plays a very important role along with HD quality video. Investing in good devices which delivers good picture output and unbeatable sound
+        clarity is always a good idea for home. Whether you’re planning for a Bluetooth speaker, 5.1 soundbar or Bluetooth headphones, Croma is the place to be! Here you will find the best audio devices to deliver the
+        unmatched audio experience as per your need.
+        </p>
+    <p>In case you are shopping online for audio devices remember it takes a little more into consideration than just sound quality when it comes to audio gadgets. 
+        Factors like room size, the distance between you and the device, power, wattage are also important. But in the case of headphones and 
+        earphones, things to consider are comfort, wireless or wired connectivity, mic-option, noise cancellation and more. Check the best models
+        of <a>headphones and earphones online.</a></p>
+        
+    <p><span><b>Buy best speakers in India as per your need</b></span> <br>
+        When it comes to <a>speakers</a>, the range available in the Indian market is vast. The decision which one to buy entirely depends upon your need.
+        If you are looking for an audio system which will give you theatre experience at home then you need to buy the best home theatre system.
+        In the market, you will get various types of home theatre speakers such as Blu-ray home theatres which offer a whopping improvement to picture
+        and sound quality over standard DVDs. Enhance your multimedia experience with a <a>home theatre system</a>  that supports both CDs and DVDs. 
+        Shop for DVD home theatre online at the best price. Many home systems allow multiple inputs such as laptop, PS3, Xbox 360, iPod, DVD player and more. 
+        These multimedia Home theatres are available in various channel options too. If you are looking for a music system, which will seamlessly 
+        blend in your interior and delivers amazing sound quality, then soundbars are a great option. Shop for soundbars that offer Bluetooth connectivity,
+        4K-friendly HDMI inputs and more online.</p>
+
+    <p>If you are a lot into streaming movies or playing games on your PC then look for the computer speakers with great bass.
+        Yes, the laptop comes with the in-built speaker but buying laptop speakers improve sound quality, adds impressive soundstage 
+        and surround sound which we make those games and media alive. If you want a speaker with a portability option, Bluetooth portable 
+        speakers are a must buy. These speakers are lightweight and offer good sound output. 
+        There are also speakers which come with AI assistances such as Alexa, Google Assistant, or Siri. 
+        Shop smart speakers from brands such as Amazon, Google and Apple online at great deals.</p>
+
+    <p>For party lover, the options of party speakers are endless. These are popularly known as <a>DJ Machines</a>. Explore the best party speaker’s which features excellent sound quality,
+        catchy lighting system, Bluetooth connectivity, long battery life, Karaoke and more. Buy and play good and loud music to enthral the guests at your home.</p>
+
+    <p><span><b>Headphones and Earphones offering wireless and wired connectivity</b></span> <br>
+        If you listen to music or watch movies while travelling or if you a professional gamer, you know how important the audio is and how surrounding disturbance kills it! Having
+        an over-ear-headphones will provide a more immersive experience. Explore wireless headphones featuring noise cancellation, well-cushioned earpads and long battery life.
+        If you are constantly on calls, buy Bluetooth headsets with mic under Rs. 2000. If you don’t want to restrict yourself with Bluetooth connectivity, you can even explore 
+        wired headphones with rich bass and clear treble. Check the prices of wired and wireless headphone online.
+    </p>
+     
+    <p>Similarly like <a>headphones, earphones</a> also come in the variation of wired and wireless earphones. Whereas the wired earphones connect to the audio device via cable, wireless 
+        earphones connect via Bluetooth technology.Hence these are also known as Bluetooth earphones. Buy best wireless earphones in India featuring long battery life, on-device control, microphones and more in Croma stores.
+    </p>
+    
+    <p>For the true wireless experience, wireless earbuds are a great companion. Earbuds combine compact designs with astral audio performance and Bluetooth connectivity.
+     They’re great for the gym or commuting. Shop for earpods now and get freedom from wires.</p>
+
+     <p><span><b>Thinking if you should buy video and audio devices online or from a Store?</b></span> <br>
+    Honestly, as long as you know exactly what you want, you can do either. At Croma, we try to ensure a seamless buying experience - in-store, online or mobile. Among a flurry of benefits, we provide personalised exclusive offers,
+    convenient EMI payment options, etc. Just in case you face any problem with your gadget. After all, the core purpose of Croma is to convert each and every dream of our customers into reality.</p>
+
+    <p>Croma offers an extensive array of protection, repair and maintenance plans for appliances and devices. To keep your electronics running for a longer time, it is a wise decision to explore and buy ZIP Services from Croma. 
+    For audio and video devices, you can consider getting Extended Warranty, Device Secure and Device Secure Gold plans.</p>
+</div>
+
+
+
+</body>
+</html>
+<script src="./JS/right.js"></script>
+<script src="./JS/hardcode.js"></script>
+<!-- Navbar Related code Starts -->
+<script type="module">
+    //
+    import navbarImp from "./components/navbar.js";
+    //console.log("navbarImp:", navbarImp());
+  
+    let navID = document.getElementById("navbar");
+    navID.innerHTML = navbarImp();
+  
+    document
+      .getElementById("nav-top-search")
+      .addEventListener("keypress", (elem) => {
+        if (elem.code == "Enter") {
+          //console.log(elem);
+  
+          let inputVal = document.getElementById("nav-top-search").value;
+          console.log("inputVal:", inputVal);
+  
+          if (
+            inputVal == "mobile" ||
+            inputVal == "MOBILE" ||
+            inputVal == "Mobile" ||
+            inputVal == "mobiles" ||
+            inputVal == "MOBILES" ||
+            inputVal == "Mobiles"
+          ) {
+            console.log("passed if condition:", inputVal);
+          }
+  
+          //window.location = "";
+        }
+      });
+  
+    //
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  
+  <!-- Navbar Related code ends -->
+
+
+
+
+
+
+

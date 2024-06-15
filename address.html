@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
+    <title></title>
+    <style>
+      #container {
+        background-color: rgb(27, 27, 27);
+        width: 100%;
+        height: 940px;
+      }
+
+      #crumb {
+        width: 98%;
+        height: 60px;
+        margin: 11px 0px 0px 0px;
+      }
+      .p {
+        color: white;
+        font-family: "Zen Kaku Gothic Antique", sans-serif;
+        font-size: 13px;
+        padding-top: 27px;
+      }
+      h2 {
+        color: white;
+        font-family: "Zen Kaku Gothic Antique", sans-serif;
+      }
+      #formcontainer {
+        width: 60%;
+        height: 918px;
+        margin-left: 300px;
+        padding: 0px;
+      }
+      #myform {
+        width: 100%;
+        height: 868px;
+        padding-top: 0px;
+      }
+      .first {
+        display: flex;
+        width: 100%;
+        height: 100px;
+      }
+      .lbl-title {
+        padding-left: 6px;
+        color: white;
+        font-family: "Zen Kaku Gothic Antique", sans-serif;
+        font-size: 15px;
+        margin-top: 0px;
+      }
+      .input {
+        height: 46px;
+        width: 90%;
+        margin-top: -6px;
+        border-radius: 10px;
+        border: 1px solid white;
+        font-size: 18px;
+        padding-left: 15px;
+      }
+      .input::placeholder {
+        color: #d4cece;
+        font-size: 18px;
+        padding-left: 15px;
+        letter-spacing: 0.5px;
+        padding-top: 1px;
+      }
+      .second {
+        width: 100%;
+        height: 150px;
+      }
+      #type {
+        display: flex;
+        justify-content: space-between;
+        width: 35%;
+        height: 50px;
+        margin-top: 0px;
+        margin-left: -15px;
+      }
+      .third {
+        width: 100%;
+        height: 70px;
+      }
+      .fourth {
+        width: 100%;
+        height: 35px;
+        font-family: "Zen Kaku Gothic Antique", sans-serif;
+        font-size: 15px;
+        color: white;
+        margin: 27px 0px 0px 0px;
+      }
+      .fifth {
+        width: 100%;
+        height: 50px;
+      }
+      .btn {
+        width: 20%;
+        height: 43px;
+
+        align-items: center;
+        margin: 28px 0px 0px 280px;
+      }
+      #btn1 {
+        width: 100%;
+        height: 43px;
+        border: 1px #00e9bf;
+        border-radius: 10px;
+
+        background-color: #00e9bf;
+        font-family: "Zen Kaku Gothic Antique", sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        color: rgb(36, 33, 33);
+        letter-spacing: 0.5px;
+      }
+      .type {
+        height: 40px;
+        width: 20%;
+      }
+      label::before {
+        content: "";
+        border: 2px solid white;
+        display: inline-block;
+        font-family: "Zen Kaku Gothic Antique", sans-serif;
+        width: 15px;
+        height: 15px;
+        margin: -4px 20px;
+        margin-left: 16px;
+        border-radius: 50%;
+      }
+      label::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+
+        left: 7px;
+        top: 12px;
+        margin: -8px 20px;
+        margin-left: 12.6px;
+        border-radius: 50%;
+        transition: all 0.4s;
+      }
+      input[type="radio"]:checked + label::after {
+        background: #7be6d2;
+      }
+      label {
+        position: relative;
+        cursor: pointer;
+        padding-right: 32px;
+        color: white;
+        font-family: "Zen Kaku Gothic Antique", sans-serif;
+        font-size: 15px;
+        padding: 0px 0px 0px 0px;
+      }
+
+      input[type="radio"] {
+        display: none;
+      }
+      #checkbox {
+        width: 20px;
+        height: 20px;
+        background-color: rgb(27, 27, 27);
+        border: 1px solid white;
+      }
+      body {
+        background-color: rgb(27, 27, 27);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div id="container">
+      <div id="crumb">
+        <p class="p" style="margin-left: 100px">
+          My Account&nbsp;&nbsp;&nbsp;&#8250;&nbsp;&nbsp;&nbsp;My
+          Addresses&nbsp;&nbsp;&nbsp;&#8250;&nbsp;&nbsp;&nbsp;Manage Address
+        </p>
+      </div>
+      <div id="formcontainer">
+        <p
+          style="
+            font-family: 'Zen Kaku Gothic Antique', sans-serif;
+            font-size: 23px;
+            color: white;
+            margin-left: 5px;
+          "
+        >
+          Add Address
+        </p>
+        <div id="myform">
+          <form>
+            <div class="first">
+              <div style="height: 100px; width: 50%">
+                <p class="lbl-title">Full name</p>
+                <input
+                  type="text"
+                  class="input"
+                  maxlength="100"
+                  placeholder="Enter Full Name"
+                  class="formControl"
+                  name="addAddressFullName"
+                />
+              </div>
+              <div style="height: 100px; width: 50%">
+                <p class="lbl-title">Mobile Number</p>
+                <input
+                  type="text"
+                  class="input"
+                  maxlength="100"
+                  placeholder="Enter Your Mobile Number"
+                  class="formControl"
+                  name="addAddressFullName"
+                />
+              </div>
+            </div>
+            <div class="first" style="padding-top: 15px">
+              <div style="height: 100px; width: 50%">
+                <p class="lbl-title">Address Nick Name <sup>*</sup></p>
+                <input
+                  type="text"
+                  class="input"
+                  maxlength="100"
+                  placeholder="Enter Nick Name"
+                  class="formControl"
+                  name="addAddressFullName"
+                />
+              </div>
+              <div style="height: 100px; width: 50%">
+                <p class="lbl-title">Pin Code</p>
+                <input
+                  type="text"
+                  class="input"
+                  maxlength="100"
+                  placeholder="Enter Pin Code"
+                  class="formControl"
+                  name="addAddressFullName"
+                />
+              </div>
+            </div>
+            <div class="second" style="padding-top: 15px">
+              <p class="lbl-title">Address</p>
+              <input
+                style="width: 95%"
+                type="text"
+                class="input"
+                placeholder="Flat No/Buliding Name/Society"
+                name="addAddressFullName"
+              />
+              <input
+                style="width: 95%; margin-top: 16px"
+                type="text"
+                class="input"
+                placeholder="Landmark/Locality/Area"
+                name="addAddressFullName"
+              />
+            </div>
+            <div class="first" style="padding-top: 27px">
+              <div style="height: 100px; width: 50%">
+                <p class="lbl-title">State</p>
+                <input
+                  type="text"
+                  class="input"
+                  maxlength="100"
+                  placeholder="State"
+                  class="formControl"
+                  name="addAddressFullName"
+                />
+              </div>
+              <div style="height: 100px; width: 50%">
+                <p class="lbl-title">City</p>
+                <input
+                  type="text"
+                  class="input"
+                  maxlength="100"
+                  placeholder="City"
+                  class="formControl"
+                  name="addAddressFullName"
+                />
+              </div>
+            </div>
+            <div class="third" style="padding-top: 15px">
+              <p class="lbl-title">Address Type</p>
+              <div id="type">
+                <input type="radio" id="home" />
+                <label for="Home">Home</label>
+
+                <input type="radio" id="Work" />
+                <label for="Work">Work</label>
+
+                <input type="radio" id="Other" />
+                <label for="Other">Other</label>
+              </div>
+            </div>
+            <div class="fourth">
+              <input type="checkbox" id="checkbox" />
+              &nbsp;&nbsp;Save This Address As Default
+            </div>
+            <div class="fifth">
+              <div class="btn">
+                <button id="btn1" onclick="redi()">
+                  SAVE ADDRESS
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>
+<!-- Navbar Related code Starts -->
+<script type="module">
+  //
+  import navbarImp from "./components/navbar.js";
+  //console.log("navbarImp:", navbarImp());
+
+  let navID = document.getElementById("navbar");
+  navID.innerHTML = navbarImp();
+
+  document
+    .getElementById("nav-top-search")
+    .addEventListener("keypress", (elem) => {
+      if (elem.code == "Enter") {
+        //console.log(elem);
+
+        let inputVal = document.getElementById("nav-top-search").value;
+        console.log("inputVal:", inputVal);
+
+        if (
+          inputVal == "mobile" ||
+          inputVal == "MOBILE" ||
+          inputVal == "Mobile" ||
+          inputVal == "mobiles" ||
+          inputVal == "MOBILES" ||
+          inputVal == "Mobiles"
+        ) {
+          console.log("passed if condition:", inputVal);
+        }
+
+        //window.location = "";
+      }
+    });
+
+  //
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+<!-- Navbar Related code ends -->
+
+<script type="module">
+  //
+  import footerImp from "./components/footer.js";
+  //console.log("navbarImp:", navbarImp());
+
+  let footerID = document.getElementById("footer");
+  footerID.innerHTML = footerImp();
+</script>
+<script>
+  function televisions() {
+    window.location.href = "otp.html";
+  }
+  function redi(){
+    alert("Address Saved")
+  window.location.href = "/index.html";
+
+}
+</script>
